@@ -1,5 +1,7 @@
 import { Request, Response } from 'express'
 
+import { Pet } from '../models/pet'
+
 import { createMenuObject } from '../helpers/createMenuObjects'
 
 export const home = (req: Request, res: Response) => {
@@ -8,7 +10,8 @@ export const home = (req: Request, res: Response) => {
         banner: {
             title: 'Todos os animais',
             background: 'allanimals.jpg'
-        }
+        },
+        allAnimals: Pet.getAll()
     })
 }
 
