@@ -21,7 +21,8 @@ export const dogs = (req: Request, res: Response) => {
         banner: {
             title: 'Todos os cachorros',
             background: 'banner_dog.jpg'
-        }
+        },
+        allDogs: Pet.getFromType('dog')
     })
 }
 
@@ -31,7 +32,8 @@ export const cats = (req: Request, res: Response) => {
         banner: {
             title: 'Todos os gatos',
             background: 'banner_cat.jpg'
-        }
+        },
+        allCats: Pet.getFromType('cat')
     })
 }
 
@@ -41,6 +43,7 @@ export const fishes = (req: Request, res: Response) => {
         banner: {
             title: 'Todos os peixes',
             background: 'banner_fish.jpg'
-        }
+        },
+        allFishes: Pet.getFromType('fish')
     })
 }
